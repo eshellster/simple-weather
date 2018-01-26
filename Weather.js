@@ -53,7 +53,7 @@ const weatherCases = {
 function Weather({temp, city, weatherName}) {
     console.log(weatherName);
     
-    return (<LinearGradient colors={["#00C6FB", "#005BEA"]} style={styles.container}>
+    return (<LinearGradient colors={weatherCases[weatherName].color} style={styles.container}>
             <View style={styles.upper}>
                 <MaterialCommunityIcons name={weatherCases[weatherName].icon} size={144} color='white'/>
                 <Text style={styles.temp}> {temp}˚</Text>
